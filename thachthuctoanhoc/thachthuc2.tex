@@ -241,7 +241,7 @@
 	\end{align*}
 	Do đó, $T$ lớn nhất khi $m$ là số nguyên dương lẻ nhỏ nhất, sao cho $120 + m$ và $120 - m$ cùng là số nguyên tố.
 	\vskip 0.05cm
-	Với $m \!=\! 1, 3, 5$, ta có $120 \!+\! m \!=\! 121, 123, 125$, đều là hợp số (do  $121 \,\vdots\, 11$, $123  \,\vdots\,  3$  và  $125 \,\vdots\, 5$).
+	Với $m \!=\! 1, 3, 5$, ta có $120 \!+\! m \!=\! 121, 123, 125$, đều là hợp số (do  $121 \vdots 11$, $123  \vdots  3$  và  $125 \vdots 5$).
 	\vskip 0.05cm
 	Với $m = 7$, ta có $120 + m = 127$, là số nguyên tố; đồng thời, $120 - m = 113$, cũng là số nguyên tố.
 	\vskip 0.05cm
@@ -268,10 +268,120 @@
 	\end{align*}
 	Chứng minh rằng, $\dfrac x{y^2}+\dfrac y{z^2}+\dfrac z{x^2}$ là một số nguyên.
 	\vskip 0.05cm
-	\textbf{\color{thachthuctoanhoc}Lời giải} ()\textbf{\color{thachthuctoanhoc}.}
+	\textbf{\color{thachthuctoanhoc}Lời giải} (\textit{của người chấm bài})\textbf{\color{thachthuctoanhoc}.}
+	\vskip 0.05cm
+	Đặt  $P = \dfrac{x}{{{y^2}}} + \dfrac{y}{{{z^2}}} + \dfrac{z}{{{x^2}}}$.
+	\vskip 0.05cm
+	Từ giả thiết của bài ra, ta có:
+	\begin{align*}
+		{x^2} &= y\left( {2y - 1} \right), \tag{$1$}\\
+		{y^2} &= z\left( {2z - 1} \right),\tag{$2$}\\
+		{z^2} &= x\left( {2x - 1} \right).\tag{$3$}
+	\end{align*}
+	Tiếp theo, cũng từ giả thiết của bài ra, theo tính chất của dãy tỉ số bằng nhau, ta có:
+	\begin{align*}
+		\frac{{\left( {{x^2} + {y^2} + {z^2}} \right) + \left( {x + y + z} \right)}}{{{x^2} + {y^2} + {z^2}}} = 2;
+	\end{align*}
+	do đó,  ${x^2} + {y^2} + {z^2} = x + y + z$. \hfill ($4$)
+	\vskip 0.05cm                                     
+	Xét hai trường hợp sau:
+	\vskip 0.05cm
+	$\diamond$ \textit{Trường hợp $1$: Trong ba số $x, y, z$, có ít nhất một số bằng $1$.}
+	\vskip 0.05cm
+	Do $P$ đối xứng đối với các hoán vị vòng quanh của $x, y, z$, nên không mất tính tổng quát, giả sử $x = 1$.
+	\vskip 0.05cm
+	Khi đó, $z^2 = 1$ (theo ($3$)); suy ra, $z = \pm 1$.
+	\vskip 0.05cm 
+	Nếu $z = -1$ thì $y^2= 3$  (theo ($2$)); do đó, theo ($1$), $y = 5$, mâu thuẫn với  $y^2 = 3$.
+	\vskip 0.05cm
+	Vì vậy, $z = -1$; suy ra, $y^2 = 1$ (theo ($2$)). Do đó, $y = 1$ (theo ($1$)).
+	\vskip 0.05cm
+	Như vậy, trong trường hợp này, $x \!=\! y \!=\! z \!=\! 1$. Do đó,  $P = 1+ 1+ 1 = 3 \in \mathbb{Z}$.
+	\vskip 0.05cm
+	$\diamond$ \textit{Trường hợp $2$: Cả ba số $x, y, z$, đều khác $1$.}
+	\vskip 0.05cm
+	Do $x, y, z \ne 0$ nên
+	\begin{align*}
+		P &= \frac{{{x^2}}}{{x{y^2}}} + \frac{{{y^2}}}{{y{z^2}}} + \frac{{{z^2}}}{{z{x^2}}} \\
+		&= \frac{{2y - 1}}{{xy}} + \frac{{2z - 1}}{{yz}} + \frac{{2x - 1}}{{zx}} \\
+		&= \frac{{2\left( {xy + yz + zx} \right) - \left( {x + y + z} \right)}}{{xyz}}. \tag{$5$}
+	\end{align*}
+	Nhân ($1$), ($2$), ($3$) với nhau, vế theo vế, với lưu ý $xyz \ne 0$, ta được:
+	\begin{align*}
+		xyz = \left( {2y - 1} \right)\left( {2z - 1} \right)\left( {2x - 1} \right).
+	\end{align*}
+	Do đó
+	\begin{align*}
+		7xyz \!=\! 4\!\left( {xy \!+\! yz \!+\! zx} \right) \!-\! 2\!\left( {x \!+\! y \!+\! z} \!\right) \!+\!\! 1. \tag{$6$}
+	\end{align*}
+	Mặt khác, ta có:
+	\begin{align*}
+		(1) &\Leftrightarrow {x^2} - 1 = 2{y^2} - y - 1\\
+		&\Leftrightarrow\! \left( {x \!-\! 1} \right)\!\left( {x \!+\! 1} \right)\! =\! \left( {y \!-\! 1} \right)\!\left( {2y \!+\! 1} \right). \tag{$7$}
+	\end{align*}
+	Một cách hoàn toàn tương tự, ta cũng có:
+	\begin{align*}
+		(2) \!\Leftrightarrow\! \left( {y \!-\! 1} \right)\left( {y \!+\! 1} \right) \!=\! \left( {z \!-\! 1} \right)\left( {2z \!+\! 1} \right), \tag{$8$}\\
+		(3) \!\Leftrightarrow\! \left( {z \!-\! 1} \right)\left( {z \!+\! 1} \right) \!=\! \left( {x \!-\! 1} \right)\left( {2x \!+\! 1} \right). \tag{$9$}
+	\end{align*}
+	Nhân ($7$), ($8$), ($9$) với nhau, vế theo vế, với lưu ý $x, y, z \ne 1$, ta được:
+	\begin{align*}
+		&\left( {x + 1} \right)\left( {y + 1} \right)\left( {z + 1} \right) \\
+		= &\left( {2y + 1} \right)\left( {2z + 1} \right)\left( {2x + 1} \right).
+	\end{align*}
+	Do đó
+	\begin{align*}
+		7xyz \!=\!  -\! 3\left( {xy \!+\! yz \!+\! zx} \right) \!-\! \left( {x \!+\! y \!+\! z} \right). \tag{$10$}
+	\end{align*}
+	Từ ($6$) và ($10$), suy ra
+	\begin{align*}
+		x + y + z = 7\left( {xy + yz + zx} \right) + 1. \tag{$11$}
+	\end{align*}
+	Do đó
+	\begin{align*}
+		&{x^2} + {y^2} + {z^2} \\
+		= \,&{\left( {x + y + z} \right)^2} - 2\left( {xy + yz + zx} \right) \\
+		= \,&{\left( {7\left( {xy + yz + zx} \right) + 1} \right)^2} - 2\left( {xy + yz + zx} \right)\\
+		= \,&49{\left( {xy + yz + zx} \right)^2}\\
+		 &\,\,+ 12\left( {xy + yz + zx} \right) + 1. \tag{$12$}
+	\end{align*}
+	Từ ($4$), ($11$) và ($12$), suy ra
+	\begin{align*}
+		&49{\left( {xy + yz + zx} \right)^2} + 12\left( {xy + yz + zx} \right) + 1 \\
+		= &\,7\left( {xy + yz + zx} \right) + 1;
+	\end{align*}
+	do đó
+	\begin{align*}
+		\left( {xy + yz + zx} \right)\left( {49\left( {xy + yz + zx} \right) + 5} \right) = 0.
+	\end{align*}
+	Vì thế, có thể xảy ra hai trường hợp sau:
+	\vskip 0.05cm
+	-- \textit{Trường hợp} $2.1$: $xy + yz + zx = 0$.
+	\vskip 0.05cm
+	Khi đó, $x + y + z = 1$  (theo ($11$)); suy ra, $xyz = - \dfrac{1}{7}$  (theo ($10$)).
+	\vskip 0.05cm
+	Do đó, theo ($5$),  $P = 7 \in \mathbb{Z}$.
+	\vskip 0.05cm
+	-- \textit{Trường hợp} $2.2$: $xy + yz + zx = - \dfrac{5}{49}$.
+	\vskip 0.05cm  
+	Khi đó, $x + y + z = \dfrac{2}{7}$  (theo ($11$)); suy ra, $xyz = \dfrac{1}{343}$  (theo ($10$)).
+	\vskip 0.05cm
+	Do đó, theo ($5$),  $P = -168 \in \mathbb{Z}$.
+	\vskip 0.05cm
+	$\diamond$ Từ kết quả xét các trường hợp nêu trên, ta có điều phải chứng minh theo yêu cầu đề bài.
 	\vskip 0.05cm
 	\textbf{\color{thachthuctoanhoc}Bình luận và Nhận xét}
 	\vskip 0.05cm
+	$\pmb{1.}$ Sử dụng phần mềm Maple $18$, bạn đọc có thể tìm ra các giá trị thực của $x, y, z$ ở các trường hợp $2.1$ và $2.2$. Điều này minh chứng cho tính chặt chẽ, chính xác toán học của Lời giải trên đây.
+	\vskip 0.05cm
+	$\pmb{2.}$ Rất tiếc, tất cả các lời giải, mà Tạp chí nhận được từ bạn đọc, đều không đúng, do người giải bài đã mắc một trong các lỗi sau:
+	\vskip 0.05cm
+	-- Ngộ nhận rằng, các số thực $x, y, z$ thỏa mãn điều kiện đề bài khi và chỉ khi $x = y = z = 1$;
+	\vskip 0.05cm
+	-- Ngộ nhận rằng, với $a, b, c, x, y, z, t$ là các số thực, $abc \ne 0$, ta có:
+	\begin{align*}
+		\frac{{x + y + z}}{{a + b + c}} = t \Rightarrow \frac{x}{a} = \frac{y}{b} = \frac{z}{c} = t.
+	\end{align*}
 	\hfill\textbf{\color{thachthuctoanhoc}Lê Huy}
 	\vskip 0.05cm
 	{\color{thachthuctoanhoc}{\usefont{T5}{qag}{b}{n} P623.}}
@@ -313,8 +423,8 @@
 		\centering
 		\vspace*{-5pt}
 		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=0.85\linewidth]{P624}
-		\vspace*{-10pt}
+		\includegraphics[width=0.82\linewidth]{P624}
+		\vspace*{-5pt}
 	\end{figure}
 	Do tam giác $ABC$ nhọn, nên $P$ thuộc cung $AC$ không chứa $B$, và $Q$ thuộc cung $AB$ không chứa $C$, của $(O)$. Do đó, $A$, $P$, $Q$ nằm cùng phía đối với đường thẳng $BC$. \hfill ($1$)
 	\vskip 0.05cm
@@ -775,3 +885,33 @@
 	\vskip 0.05cm
 	\hfill\textbf{\color{thachthuctoanhoc}Nguyễn Khắc Minh}
 \end{multicols}
+\begin{center}
+	\textbf{\color{thachthuctoanhoc}DANH SÁCH HỌC SINH CÓ LỜI GIẢI HOÀN CHỈNH}
+\end{center}
+\textit{Trong các ngoặc đơn ở phần dưới đây, sau tên lớp là mã hiệu của các bài toán mà học sinh có lời giải hoàn chỉnh.}
+\begin{multicols}{2}
+	\textbf{\color{thachthuctoanhoc}KHỐI THCS}
+	\vskip 0.05cm
+	$\bullet$ Trường \textbf{\color{thachthuctoanhoc}THCS Long Bình Điền}, Tỉnh Tiền Giang: \textit{Võ Trần Tiến} (lớp $8^5$,  P$621$).
+	\vskip 0.05cm
+	\textbf{\color{thachthuctoanhoc}KHỐI THPT}
+	\vskip 0.05cm
+	$\bullet$ Trường \textbf{\color{thachthuctoanhoc}THPT số $\pmb{2}$ Phù Cát}, Tỉnh Bình Định: \textit{Nguyễn Hữu Trí} (lớp $10$A$1$; P$624$).
+	\vskip 0.05cm
+	$\bullet$ Trường \textbf{\color{thachthuctoanhoc}THPT chuyên Lê Quý Đôn}, Tp. Đà Nẵng: \textit{Nguyễn Châu Tuấn Kiệt} (lớp $10$A$2$; P$624$, P$625$, P$628$).
+	\vskip 0.05cm
+	$\bullet$ Trường \textbf{\color{thachthuctoanhoc}THPT chuyên Nguyễn Quang Diêu}, Tỉnh Đồng Tháp: \textit{Lâm Nhật Tiến} (lớp $10$T$1$; P$624$).
+	\vskip 0.05cm
+	$\bullet$ Trường \textbf{\color{thachthuctoanhoc}THPT chuyên Hà Tĩnh}, Tỉnh Hà Tĩnh: \textit{Trần Minh Hoàng} (lớp $10$T$1$; P$627$, P$628$, P$630$).
+	\vskip 0.05cm
+	$\bullet$ Trường \textbf{\color{thachthuctoanhoc}THPT Gia Định}, Tp. Hồ Chí Minh: \textit{Lê Nam Khánh} (lớp $11$CT; P$624$, P$628$), \textit{Nguyễn Hà Ngọc Uyên} (lớp $12$CT; P$624$).
+	\vskip 0.05cm
+	$\bullet$ Trường \textbf{\color{thachthuctoanhoc}THPT chuyên Hưng Yên}, Tỉnh Hưng Yên: \textit{Trần Hữu Dương} (lớp $11$ Toán $1$; P$621$, P$625$).
+	\vskip 0.05cm
+	$\bullet$ Trường \textbf{\color{thachthuctoanhoc}THPT chuyên Lương Văn Chánh}, Tỉnh Phú Yên: \textit{Nguyễn Thị Bảo Tiên} (lớp $11$ Toán $1$; P$624$).
+	\vskip 0.05cm
+	$\bullet$ Trường \textbf{\color{thachthuctoanhoc}THPT chuyên Khoa học tự nhiên}, ĐH Khoa học tự nhiên -- ĐHQG Hà Nội: \textit{Vương Khánh Toàn} (lớp $10$A$1$ Toán; P$627$).
+	\vskip 0.05cm
+	$\bullet$ Trường \textbf{\color{thachthuctoanhoc}THPT chuyên Sư phạm}, ĐH Sư phạm Hà Nội: \textit{Hồ Trần Khánh Linh} (lớp $12$ Toán $2$; P$627$, P$628$, P$629$, P$630$).
+\end{multicols}
+
