@@ -8,6 +8,14 @@
 \AddToShipoutPicture*{\put(40,550){\includegraphics[scale=1]{../tieude1.pdf}}} 
 \centering
 \endgroup
+
+\tikzset{
+	pics/carc/.style args={#1:#2:#3}{
+		code={
+			\draw[pic actions] (#1:#3) arc(#1:#2:#3);
+		}
+	}
+}
 \vspace*{155pt}
 
 \begin{multicols}{2}
@@ -420,37 +428,43 @@
 	\textit{Lời giải.} Trong hình dưới đây chỉ ra cách vẽ một đường kính của hình tròn. Các em chỉ cần đặt thước kẻ sao cho ở hai phía của thước hiện ra các phần có độ dài khác nhau. Sau đó nối các điểm như trong hình vẽ, và đường thẳng đi qua $AB$ cũng chứa một đường kính của đường tròn. Các em lại làm tiếp một lần nữa như vậy và rõ ràng giao điểm của hai đường kính sẽ là tâm của hình tròn\linebreak đã cho.
 	\begin{figure}[H]
 		\centering
-		\vspace*{5pt}
+		\vspace*{-5pt}
 		\captionsetup{labelformat= empty, justification=centering}
-		\begin{tikzpicture}[scale=0.65,toancuabi]
-			\draw [] (0,0) circle (3cm);
-			\draw [] (-1.00719,3.55841)-- (-1.007190681933522,-3.6065791726776877);
-			\draw [] (-1.0071900697196219,2.8258747607525327)-- (2.583652996516921,-1.5247088881452537);
-			\draw [] (2.5836532867476274,1.5247083963427839)-- (-1.0071906076293426,-2.8258745690322558);
-			\draw [] (2.5836529350778403,-2.1702415287641776)-- (2.5836533499603247,2.188876204508036);
-			\draw [] (-2.005761227573855,3.1877137701678344)-- (7.984604640870016,-0.43236283739412373);
-			\draw [] (8.000146076824445,0.43799282872155576)-- (-1.996061700033113,-3.184198481210252);
-			
-			\draw [fill=white] (-1.0071900697196219,2.8258747607525327) circle (1.6pt);
-			\draw [fill=white] (2.5836532867476274,1.5247083963427839) circle (1.6pt);
-			\draw [fill=white] (2.583652996516921,-1.5247088881452537) circle (1.6pt);
-			\draw [fill=white] (-1.0071906076293426,-2.8258745690322558) circle (1.6pt);
-			\draw [fill=white] (6.7914098706510515,-6.46377815560595E-7) circle (1.6pt);
-			\draw (6.78454311732612,0.5166504757685513) node {$B$};
-			\draw [fill=white] (1.325203480781398,-1.261272915591262E-7) circle (1.6pt);
-			\draw (1.2770638218469081,0.607833907812909) node {$A$};
-		\end{tikzpicture}
-		\vspace*{-10pt}
+		\includegraphics[width=1\linewidth]{thuoc}
+		\vspace*{-5pt}
 	\end{figure}
 	$\pmb{6.}$ Tất cả các điểm của một đường tròn được tô bằng hai màu: trắng hoặc đỏ. Em hãy chứng tỏ rằng luôn có một tam giác cân có các đỉnh nằm trên đường tròn đã cho sao cho các đỉnh của nó đều được tô bởi cùng một màu.
 	\begin{figure}[H]
 		\centering
-		\vspace*{-10pt}
+%		\vspace*{-5pt}
 		\captionsetup{labelformat= empty, justification=centering}
-		\includegraphics[width=0.7\linewidth]{bai6}
-		\vspace*{-5pt}
+		\includegraphics[width=1\linewidth]{bai6}
+%		\vspace*{-5pt}
 	\end{figure}
 	\textit{Lời giải.} Em  hãy lấy một ngũ giác đều với $5$ đỉnh nằm trên đường tròn đã cho. Bằng nguyên lý Dirichlet dễ thấy phải có ít nhất $3$ đỉnh cùng được tô bởi cùng một màu. Trong mọi cách chọn $3$ đỉnh này, chúng luôn tạo thành một tam giác cân thoả mãn điều kiện của đề bài.
+	\begin{figure}[H]
+%		\vspace*{1pt}
+		\centering
+		\captionsetup{labelformat= empty, justification=centering}
+		\begin{tikzpicture}[toancuabi,scale=1.13]
+			\fill[fill= cackithi!30] (-0.9270509831248419,2.853169548885461) -- (3.9270509831248424,2.85316954888546) -- (0.,0.) -- cycle;
+			\draw  (0.,0.)-- (3.,0.);
+			\draw  (3.,0.)-- (3.9270509831248424,2.85316954888546);
+			\draw  (3.9270509831248424,2.85316954888546)-- (1.5,4.616525305762879);
+			\draw  (1.5,4.616525305762879)-- (-0.9270509831248419,2.853169548885461);
+			\draw  (-0.9270509831248419,2.853169548885461)-- (0.,0.);
+			\draw  (1.5,2.06457288070676) circle (2.551952425056119cm);
+			\draw  (-0.9270509831248419,2.853169548885461)-- (3.9270509831248424,2.85316954888546);
+			\draw (3.9270509831248424,2.85316954888546)-- (0.,0.);
+			\draw (0.,0.)-- (-0.9270509831248419,2.853169548885461);
+				\draw [fill=red] (0.,0.) circle (2.0pt);
+				\draw [fill=white] (3.,0.) circle (2.0pt);
+				\draw [fill=red] (3.9270509831248424,2.85316954888546) circle (2.0pt);
+				\draw [fill=white] (1.5,4.616525305762879) circle (2.0pt);
+				\draw [fill=red] (-0.9270509831248419,2.853169548885461) circle (2.0pt);
+		\end{tikzpicture}
+		\vspace*{10pt}
+	\end{figure}
 \end{multicols}
 \newpage
 \begingroup
